@@ -65,4 +65,7 @@ gem 'spree_gateway', '~> 3.2.0.beta'
 
 
 gem 'cowsay'
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
+
+
 
