@@ -143,12 +143,15 @@ ActiveRecord::Schema.define(version: 20170915135523) do
     t.string   "type"
     t.string   "name"
     t.text     "description"
-    t.boolean  "active",      default: true
-    t.string   "environment", default: "development"
-    t.string   "server",      default: "test"
-    t.boolean  "test_mode",   default: true
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.text     "need_to_know"
+    t.text     "additional_info"
+    t.text     "what_included"
+    t.boolean  "active",          default: true
+    t.string   "environment",     default: "development"
+    t.string   "server",          default: "test"
+    t.boolean  "test_mode",       default: true
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.text     "preferences"
     t.index ["active"], name: "index_spree_gateways_on_active", using: :btree
     t.index ["test_mode"], name: "index_spree_gateways_on_test_mode", using: :btree
@@ -334,14 +337,17 @@ ActiveRecord::Schema.define(version: 20170915135523) do
     t.string   "type"
     t.string   "name"
     t.text     "description"
-    t.boolean  "active",       default: true
+    t.text     "need_to_know"
+    t.text     "additional_info"
+    t.text     "what_included"
+    t.boolean  "active",          default: true
     t.datetime "deleted_at"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.string   "display_on",   default: "both"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "display_on",      default: "both"
     t.boolean  "auto_capture"
     t.text     "preferences"
-    t.integer  "position",     default: 0
+    t.integer  "position",        default: 0
     t.index ["id", "type"], name: "index_spree_payment_methods_on_id_and_type", using: :btree
   end
 
@@ -416,6 +422,9 @@ ActiveRecord::Schema.define(version: 20170915135523) do
   create_table "spree_products", force: :cascade do |t|
     t.string   "name",                 default: "",   null: false
     t.text     "description"
+    t.text     "need_to_know"
+    t.text     "additional_info"
+    t.text     "what_included"
     t.datetime "available_on"
     t.datetime "deleted_at"
     t.string   "slug"
@@ -501,6 +510,9 @@ ActiveRecord::Schema.define(version: 20170915135523) do
 
   create_table "spree_promotions", force: :cascade do |t|
     t.string   "description"
+    t.string   "need_to_know"
+    t.string   "additional_info"
+    t.string   "what_included"
     t.datetime "expires_at"
     t.datetime "starts_at"
     t.string   "name"
@@ -929,10 +941,13 @@ ActiveRecord::Schema.define(version: 20170915135523) do
   create_table "spree_tax_categories", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.boolean  "is_default",  default: false
+    t.string   "need_to_know"
+    t.string   "additional_info"
+    t.string   "what_included"
+    t.boolean  "is_default",      default: false
     t.datetime "deleted_at"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "tax_code"
     t.index ["deleted_at"], name: "index_spree_tax_categories_on_deleted_at", using: :btree
     t.index ["is_default"], name: "index_spree_tax_categories_on_is_default", using: :btree
@@ -976,6 +991,9 @@ ActiveRecord::Schema.define(version: 20170915135523) do
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
     t.text     "description"
+    t.text     "need_to_know"
+    t.text     "additional_info"
+    t.text     "what_included"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.string   "meta_title"
@@ -1076,6 +1094,9 @@ ActiveRecord::Schema.define(version: 20170915135523) do
   create_table "spree_zones", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
+    t.string   "need_to_know"
+    t.string   "additional_info"
+    t.string   "what_included"
     t.boolean  "default_tax",        default: false
     t.integer  "zone_members_count", default: 0
     t.datetime "created_at",                         null: false

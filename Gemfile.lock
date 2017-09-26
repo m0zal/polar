@@ -389,6 +389,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3.6)
   byebug
   capistrano-rails
   capybara (~> 2.13)
@@ -400,7 +401,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.0.3)
-  sass-rails (~> 5.0)
+  sass-rails (>= 3.2)
   selenium-webdriver
   spree (~> 3.2.0)
   spree_auth_devise (~> 3.2.0.beta)

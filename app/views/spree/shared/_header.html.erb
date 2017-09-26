@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"  style="position:relative;top:12px;">The Real Adventures<figure id="logo"  style="float:left"; class="col-md-4 col-sm-3" data-hook><%= logo %></figure></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"></li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Driving</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Flying</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link disabled" href="#">Relaxing</a>
+      </li>
+                  <li class="nav-item">
+        <a class="nav-link disabled" href="#">Incredible</a>
+      </li>
+                        <li class="nav-item">
+        <a class="nav-link disabled" href="#">Expirience</a>
+      </li>
+      <li class="nav-item"></li>
+        <li class="nav-item">       <noscript>
+          <%= link_to Spree.t(:cart), '/cart' %>
+        </noscript>
+        &nbsp;
+      </li>
+      <script>Spree.fetch_cart()</script></ul>
+      <%= link_to Spree.t(:home), spree.root_path %>
+      <a class="nav-link" href="#">login</a>
+      <%= render partial: 'spree/shared/search' %>
+              <a class="nav-link disabled" href="#"><%= link_to_cart %></a>
+    </div>
+</nav>
+
+</div>
+
+<aside id="header" class="col-sm-4 col-md-3" data-hook>
+  <%= yield :sidebar %>
+</aside>

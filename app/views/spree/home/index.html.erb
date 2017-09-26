@@ -1,0 +1,21 @@
+<% @body_id = 'home-page' %>
+<h1> Добро пожаловать!</h1>
+<% content_for :sidebar do %>
+<h1> Добро пожаловать!</h1>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render partial: 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
+<div class="row">
+          <div class="card">
+            <img src="/images/giftucool_blue_logo.png" alt="Card image cap" width ="200" style="float:left;">
+            <p class="card-text" style="float:right;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+<div data-hook="homepage_products">
+  <% cache(cache_key_for_products) do %><h2>Original gifts collection</h2>
+    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+  <% end %>
+             </div>
+    </div>
+</div>
+

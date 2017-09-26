@@ -8,7 +8,10 @@ class SpreeOneTwo < ActiveRecord::Migration[4.2]
 
 
     create_table :spree_activators do |t|
-      t.string     :description
+      t.string     :description      
+      t.string     :need_to_know
+      t.string     :additional_info
+      t.string     :what_included
       t.datetime   :expires_at
       t.datetime   :starts_at
       t.string     :name
@@ -113,6 +116,9 @@ class SpreeOneTwo < ActiveRecord::Migration[4.2]
       t.string     :type
       t.string     :name
       t.text       :description
+      t.text       :need_to_know
+      t.text       :additional_info
+      t.text       :what_included
       t.boolean    :active,      default: true
       t.string     :environment, default: 'development'
       t.string     :server,      default: 'test'
@@ -210,6 +216,9 @@ class SpreeOneTwo < ActiveRecord::Migration[4.2]
       t.string     :type
       t.string     :name
       t.text       :description
+      t.text       :need_to_know
+      t.text       :additional_info
+      t.text       :what_included
       t.boolean    :active,      default: true
       t.string     :environment, default: 'development'
       t.datetime   :deleted_at
@@ -258,6 +267,9 @@ class SpreeOneTwo < ActiveRecord::Migration[4.2]
     create_table :spree_products do |t|
       t.string     :name,                 default: '', null: false
       t.text       :description
+      t.text       :need_to_know
+      t.text       :additional_info
+      t.text       :what_included
       t.datetime   :available_on
       t.datetime   :deleted_at
       t.string     :permalink
@@ -369,6 +381,9 @@ class SpreeOneTwo < ActiveRecord::Migration[4.2]
     create_table :spree_tax_categories do |t|
       t.string     :name
       t.string     :description
+      t.string     :need_to_know
+      t.string     :additional_info
+      t.string     :what_included
       t.boolean    :is_default, default: false
       t.datetime   :deleted_at
       t.timestamps null: false
@@ -400,6 +415,9 @@ class SpreeOneTwo < ActiveRecord::Migration[4.2]
       t.integer    :icon_file_size
       t.datetime   :icon_updated_at
       t.text       :description
+      t.text       :need_to_know
+      t.text       :additional_info
+      t.text       :what_included
       t.timestamps null: false
     end
 
@@ -474,6 +492,9 @@ class SpreeOneTwo < ActiveRecord::Migration[4.2]
     create_table :spree_zones do |t|
       t.string     :name
       t.string     :description
+      t.string     :need_to_know
+      t.string     :additional_info
+      t.string     :what_included
       t.boolean    :default_tax,        default: false
       t.integer    :zone_members_count, default: 0
       t.timestamps null: false

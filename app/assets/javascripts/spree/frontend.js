@@ -1,0 +1,12 @@
+@import jquery
+@import jquery_ujs
+@import jquery.payment
+@import jquery.validate/jquery.validate.min
+@import spree
+@import spree/frontend/cart
+@import spree/frontend/checkout
+@import spree/frontend/checkout/address
+@import spree/frontend/checkout/payment
+@import spree/frontend/product
+@import jquery
+@import bootstrap-sprockets
